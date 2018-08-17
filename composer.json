@@ -1,0 +1,22 @@
+{
+    "name": "admin/navigos_test",
+    "authors": [
+        {
+            "name": "chuyennv",
+            "email": "tearsofgod201@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^5.6",
+        "twig/twig": "^2.5"
+    },
+    "autoload": {
+        "classmap": [
+            "app/models",
+            "app/core"
+        ],
+        "files": [
+            "app/database.php"
+        ]
+    }
+}
