@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class User extends Eloquent
@@ -10,7 +10,7 @@ class User extends Eloquent
     private $name;
 
     /** @var string */
-    private $emailAddress;
+    private $email;
 
     /** @var integer */
     private $role;

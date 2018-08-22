@@ -9,9 +9,10 @@ class Home extends Controller
      */
     public function index()
     {
+        /** @var User $user */
         $user = $this->model('user');
-
-        $this->view('home/index', [
+        $data = $user::all();
+        $this->view('home', [
             'name' => $user->name,
         ]);
     }

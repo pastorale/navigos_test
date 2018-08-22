@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <title>Navi Test</title>
+        <meta charset="utf-8">
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <![endif]-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="{{ ASSET_ROOT }}/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ ASSET_ROOT }}/css/animations.css">
+        <link rel="stylesheet" href="{{ ASSET_ROOT }}/css/fonts.css">
+        <link rel="stylesheet" href="{{ ASSET_ROOT }}/css/main.css" class="color-switcher-link">
+    </head>
+
+    <body>
+        {% block menubar %}
+            <section class="page_breadcrumbs ls background_cover section_padding_top_15 section_padding_bottom_15">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h2 class="highlight">Guest Book</h2>
+                            <ol class="breadcrumb  highlight3links">
+                                <li>
+                                    <a href="home">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Add message</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endblock %}
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
+
