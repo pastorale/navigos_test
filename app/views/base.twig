@@ -22,15 +22,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h2 class="highlight">Guest Book</h2>
+                            <h2 class="highlight"><a href="/">Guest Book</a></h2>
                             <ol class="breadcrumb  highlight3links">
                                 <li>
-                                    <a href="home">
+                                    <a href="/">
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">Add message</a>
+                                    <a href="/addMessage">Add message</a>
                                 </li>
                             </ol>
                         </div>
@@ -41,5 +41,8 @@
         {% block body %}
         {% endblock %}
     </body>
+    <footer>
+        <script type="text/javascript" src="{{ ASSET_ROOT }}/js/main.js"></script>
+    </footer>
 </html>
 

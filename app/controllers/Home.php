@@ -9,11 +9,11 @@ class Home extends Controller
      */
     public function index()
     {
-        /** @var User $user */
-        $user = $this->model('user');
-        $data = $user::all();
+        /** @var Message $message */
+        $message = $this->model('message');
+        $data = $message::orderBy('updated_at', 'desc')->get();
         $this->view('home', [
-            'name' => $user->name,
+            'data' => $data
         ]);
     }
 }

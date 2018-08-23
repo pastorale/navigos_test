@@ -25,22 +25,28 @@ class App
     {
         $url = $this->parseUrl();
 
-        if (file_exists('../app/controllers/' . ucfirst($url[1]) . '.php')) {
-            $this->controller = $url[1];
-            unset($url[0]);
+        if(array_key_exists(1, $url)) {
+            if (file_exists('../app/controllers/' . ucfirst($url[1]) . '.php')) {
+                $this->controller = $url[1];
+                unset($url[0]);
+            }
+
         }
 
         require_once '../app/controllers/' . ucfirst($this->controller) . '.php';
 
         $this->controller = new $this->controller();
 
-        if (isset($url[2])) {
-            if (method_exists($this->controller, $url[2])) {
-                $this->method = $url[2];
+        if(array_key_exists(2, $url)) {
+            if (isset($url[2])) {
+                if (method_exists($this->controller, $url[2])) {
+                    $this->method = $url[2];
 
-                unset($url[2]);
+                    unset($url[2]);
+                }
             }
         }
+
 
 //        $this->params = $url ? array_values($url) : [];
 

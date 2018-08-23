@@ -1,4 +1,56 @@
 {% extends "base.twig" %}
 {% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 to_animate animated fadeInUp" data-animation="fadeInUp">
+                <div class="page_contacts cs main_color5 parallax with_padding big-padding with_shadow text-center" style="background-position: 50% 1px;">
+                    <h3 class="big">
+                        Saigon,
+                        <span class="highlight5">Viet Nam</span>
+                    </h3>
+                    <hr class="dotted_divider big_dots divider_50">
 
+                    <form class="contact-form row topmargin_60 columns_margin_bottom_20" method="post" action="./">
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name">Full Name
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Name" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="email">Email address
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="phone">Title</label>
+                                <input type="text" size="30" value="" name="title" id="title" class="form-control" placeholder="Title">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="contact-form-message form-group">
+                                <label for="message">Message</label>
+                                <textarea aria-required="true" rows="10" cols="45" name="message" id="message" class="form-control" placeholder="Message" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="contact-form-submit">
+                                <button type="button" id="mess_form_submit" name="mess_submit" class="btn-primary">Send message</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
